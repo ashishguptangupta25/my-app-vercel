@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const onClick = () => {
+    throw new Error("Test error");
+  };
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -51,11 +56,7 @@ export default function Home() {
             />
             Deploy Now
           </a>
-          <button
-            onClick={() => {
-              throw new Error("Test error");
-            }}
-          ></button>
+          <button onClick={onClick}>Error</button>
         </div>
       </main>
     </div>
