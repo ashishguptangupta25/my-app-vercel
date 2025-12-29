@@ -51,14 +51,11 @@ export default function Home() {
             />
             Deploy Now
           </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          <button
+            onClick={() => {
+              throw new Error("Test error");
+            }}
+          ></button>
         </div>
       </main>
     </div>
